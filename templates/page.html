@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" media="all" href="{{ src_path }}/css/html.css" />
+    <link rel="stylesheet" media="all" href="{{ src_path }}/css/page.css" />
+    <link rel="stylesheet" media="all" href="{{ src_path }}/css/page--first.css" />
+    <link rel="stylesheet" media="all" href="{{ src_path }}/css/typography.css" />
+    <link rel="stylesheet" media="all" href="{{ src_path }}/css/editor-containers.css" />
+    <link rel="stylesheet" media="all" href="{{ src_path }}/css/editor-styles.css" />
+    <link rel="stylesheet" media="all" href="{{ modules_path }}/apexcharts/dist/apexcharts.css" />
+    <script src="{{ modules_path }}/apexcharts/dist/apexcharts.min.js"></script>
+  </head>
+  <body>
+    {% include "templates/first.html" %}
+    <div class="content-main">
+      {{ page_content|safe }}
+    </div>
+    <script type="text/javascript">
+      var charts = document.querySelectorAll("div[type='apexChart']");
+      if (charts != null) {
+        charts.forEach((el, index) => {
+          var options = JSON.parse(el.dataset.options);
+          options.chart.animations = {
+            enabled: false
+          };
+          options.chart.toolbar = {
+            show: false
+          };
+          var chart = new ApexCharts(el, options);
+          chart.render();
+        });
+      }
+    </script>
+  </body>
+</html>

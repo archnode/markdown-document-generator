@@ -1,0 +1,24 @@
+{% if frontmatter.title %}
+<div class="content-first">
+  <div class="content-first__container">
+    <div class="content-first__logo">
+      <img src="{{ src_path }}/assets/logo.png" alt="" />
+    </div>
+    <div class="content-first__title">{{ frontmatter.title }}</div>
+    <div class="content-first__subtitle">{{ frontmatter.subtitle }}</div>
+    <div class="content-first__date">{{ date }}</div>
+    <div class="content-first__footer">
+      <div class="content-first__footer-first">
+        <h6>Erstellt für:</h6>
+        {{ frontmatter.company }}<br/>
+        {{ frontmatter.company_contact }}
+      </div>
+      <div class="content-first__footer-second">
+        <h6>By example agency:</h6>
+        office@example.com<br/>
+        Tel: +43 123 123 123 12
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

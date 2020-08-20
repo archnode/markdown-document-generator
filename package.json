@@ -1,0 +1,39 @@
+{
+  "name": "markdown-document-generator",
+  "version": "1.0.0",
+  "description": "PDF proposals with markdown",
+  "main": "index.js",
+  "scripts": {
+    "pdf": "node create-pdf.js",
+    "html": "node create-html.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.signalonline.at:signal/signal-docs-proposals.git"
+  },
+  "keywords": [
+    "markdown",
+    "document",
+    "pdf",
+    "charts"
+  ],
+  "author": "Markus Aichinger <markus@aichinger.dev>",
+  "homepage": "https://github.com/archnode/markdown-document-generator",
+  "license": "GPL-3.0+",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "apexcharts": "^3.20.0",
+    "gray-matter": "^4.0.2",
+    "markdown-it": "^11.0.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-front-matter": "^0.2.1",
+    "markdown-it-include": "^1.1.1",
+    "markdown-it-multimd-table": "^4.0.3",
+    "nunjucks": "^3.2.2",
+    "puppeteer": "^5.2.1",
+    "yaml": "^1.10.0"
+  }
+}

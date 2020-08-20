@@ -1,0 +1,105 @@
+.grid-2col {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid #585af3;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid-2col .grid-item {
+  flex: 0 0 50%;
+  padding: 0.25rem 0.8rem;
+  border-bottom: 0.05pt solid #585af3;
+}
+
+.dl,
+.dl--numbered {
+  display: table;
+}
+
+.dl .dl-header,
+.dl--numbered .dl-header {
+  display: table-header-group;
+}
+
+.dl .dl-header-row,
+.dl--numbered .dl-header-row {
+  display: table-row;
+}
+
+.dl .dl-header-row > *,
+.dl--numbered .dl-header-row > * {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.dl .dl-rows,
+.dl--numbered .dl-rows {
+  display: table-row-group;
+}
+
+.dl--numbered .dl-rows {
+  counter-reset: inst;
+}
+
+.list-pos-row,
+.dl .dl-row,
+.dl--numbered .dl-row {
+  display: table-row;
+}
+
+.dl--numbered .dl-row {
+  counter-increment: inst;
+}
+
+.list-pos-row > *,
+.dl .dl-row > *,
+.dl--numbered .dl-row > * {
+  display: table-cell;
+}
+
+.list-pos-result--info {
+  background-color: #f4f4f4;
+}
+
+.list-pos-result--passed {
+  background-color: #C6F6D5;
+}
+
+.list-pos-result--warning {
+  background-color: #FAF089;
+}
+
+.list-pos-result--critical {
+  background-color: #FEB2B2;
+}
+
+.dl--numbered .dl-header-row::before {
+  content: '#';
+  display: table-cell;
+  padding: 0.35rem 0.8rem;
+}
+
+.dl--numbered .dl-row::before {
+  content: counter(inst)".";
+  display: table-cell;
+  padding: 0.35rem 0.8rem;
+}
+
+.dl-title {
+  font-weight: bold;
+  color: #444;
+  width: 30%;
+}
+
+.dl-content {
+  width: 65%;
+}
+
+.list-pos-content {
+  width: 85%;
+}
+
+.list-pos-pos {
+  font-weight: bold;
+}

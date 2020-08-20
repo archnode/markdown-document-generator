@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.dl,
+.dl--numbered,
+table {
+  page-break-inside: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  border: 0;
+}
+
+.dl .dl-header,
+.dl--numbered .dl-header,
+thead {
+  page-break-inside: avoid;
+  background-color: #4042f3;
+  color: white;
+}
+
+.dl .dl-header-row,
+.dl--numbered .dl-header-row,
+thead tr {
+  border: 0;
+}
+
+.dl .dl-header-row > *,
+.dl--numbered .dl-header-row > *,
+thead th {
+  padding: 0.7rem 0.8rem 0.6rem;
+  text-align: left;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.list-pos-row,
+.dl .dl-row,
+.dl--numbered .dl-row,
+tr {
+  page-break-inside:avoid;
+  page-break-after:auto;
+  border-bottom: 0.05pt solid #999ae6;
+}
+
+.list-pos-row > *,
+.dl .dl-row > *,
+.dl--numbered .dl-row > *,
+td {
+  padding: 0.75rem 0.8rem 0.55rem;
+}
+
+.list-pos-row > * > :first-child,
+.dl .dl-row > * > :first-child,
+.dl--numbered .dl-row > * > :first-child,
+td > :first-child {
+  margin-top: 0;
+}
+
+.list-pos-row > * > :last-child,
+.dl .dl-row > * > :last-child,
+.dl--numbered .dl-row > * > :last-child,
+td > :last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
